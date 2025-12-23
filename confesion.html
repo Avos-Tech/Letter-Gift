@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message For You</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+
+    <video autoplay muted loop id="bg-video">
+        <source src="eb38fe94-9a24-42aa-b97b-2dcf57f85c52.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-container">
+        <div class="envelope-wrapper" id="envelope">
+            <div class="letter">
+                <div class="letter-content">
+                    <strong class="confession-title">To my favorite person Allyriane/Ly,</strong>
+                    <hr>
+                    <p class="confession-text">
+                        I've been wanting to tell you this. 
+                        Every time I see you, my heart flutters with excitement. 
+                        I held it back for a few months until I couldn't hold back my feelings anymore, and all I needed was to tell you.
+                        Don't worry after nito is try ko pigilan ang want ko lang is masabi ko lang yung feelings 
+                        ko and ayoko maging awkward tayo sa isa't isa, sorry if napaabot tayo sa gantong scenario gusto ko lang mag thank you 
+                        kasi dumating ka sa part na even though is wala na dapat tayong pag uusapan pa pero ayon like napahaba ko pa 
+                        hahaha at hindi ko sinasadya magkagusto sayo sorry. Hindi ko expect na aabot tayo sa ganto but sa tuwing iniisip kita,
+                        hindi ako mapalagay kahit sa reply mo palang na akala mo 12 hrs mag reply is hindi ako makapagpakampante.
+                        That's the reason why pinapagawa ko sayo yung mga videos na yon para kahit papaano if hindi ako mapakali at inaantay ka
+                        pinapanood ko videos mo, oo puro vids mo laman ng gallery kasi hindi ko maintindihan time na yon kung ako pa ba to o hindi na
+                        kasi hindi ako mapakali kapag hindi ka kausap and yan din ang reason ko bakit ko sinabe na uhaw ako sayo meaning is uhaw ako sa 
+                        sa attensyon, presence mo at lalo yung marinig lang yung boses mo, sorry if nagkaganto ako❤️
+                    </p>
+                    <p class="signature">With love, Jen/Aruzen</p>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+
+        <button class="open-btn" id="openBtn">Open my heart</button>
+    </div>
+
+    <audio id="letter-audio" loop>
+        <source src="delusional.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const envelope = document.getElementById('envelope');
+        const btn = document.getElementById('openBtn');
+        const audio = document.getElementById('letter-audio');
+
+        function toggleEnvelope() {
+            envelope.classList.toggle('open');
+            if (envelope.classList.contains('open')) {
+                audio.play();
+                btn.innerHTML = "Close with a smile";
+            } else {
+                audio.pause();
+                btn.innerHTML = "Open my heart";
+            }
+        }
+
+        btn.addEventListener('click', toggleEnvelope);
+        envelope.addEventListener('click', toggleEnvelope);
+    </script>
+</body>
+</html>
